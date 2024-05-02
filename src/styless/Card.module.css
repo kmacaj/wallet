@@ -1,0 +1,37 @@
+
+.main{
+    background: linear-gradient(to right, #02e1ff, #00ffc8);
+    background-color: rgb(0, 85, 91);
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 10px 30px;
+    color: white;
+}
+
+.bar{
+    background-color: white;
+    margin: 20px 0 20px 0;
+    padding: 0;
+    border-radius: 5px;
+    
+}
+
+.progress{
+    font-size: 1px;
+    padding: 2.5px;
+    border-radius: 5px;
+}
+.main >h1{
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.price{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 0px;
+}
+.price >span{
+    font-size: x-large;
+    font-weight: 700;
+}

@@ -1,0 +1,84 @@
+.container {
+    padding: 30px 15px;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.arrow {
+    font-size: 24px;
+    padding: 8px;
+    color: gray;
+}
+
+.user {
+    font-size: 40px;
+    margin-left: auto;
+    color : rgb(123, 0, 255);
+    box-shadow: 0 0 8px rgba(102, 72, 133, 0.663);
+    border-radius: 50%;
+}
+
+.header{
+    display: flex;
+}
+
+
+h3{
+    margin-top: 20px;
+}
+.addbtn{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    margin-top: 10px;
+    margin-left: auto ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.add{
+    color : rgb(0, 17, 255);
+    /* padding: 0px 3px 5px 0; */
+    padding-left: 10px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.plus{
+    font-size: 30px;
+    padding-left: 10px;
+    color: rgb(41, 41, 41);
+}
+
+.upgrade{
+    /* height: 150px; */
+    background-color: blue;
+    margin-top: 0;
+    border-radius: 20px;
+    padding: 15px 30px;
+}
+
+.pro{
+    padding: 5px 12px;
+    color: blue;
+    background-color: white;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.procard{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: larger;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.right{
+    margin-left: auto;
+    font-size: 30px;
+}
