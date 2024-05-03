@@ -5,46 +5,40 @@ import { CiCirclePlus } from "react-icons/ci";
 import Contact from "./Contact";
 import Vodafone from "./Vodafone";
 import { Link } from "react-router-dom";
+import Addnew from "./Addnew";
+const data = [
+    {
+        image: profilepic,
+        name: "Alban Zyle"
+    },
+
+]
+const expenseData = [
+    {
+        image: "https://static.vecteezy.com/system/resources/previews/020/927/346/original/vodafone-logo-brand-phone-symbol-with-name-white-design-england-mobile-illustration-with-red-background-free-vector.jpg",
+        name: "Vodafone",
+        date: "22 Monday April",
+        price:"-$32",
+    },
+    {
+        image: "https://tse1.mm.bing.net/th?id=OIP.0B9qUkgn0IAUO6e2pP0pYQHaHa&pid=Api&P=0&h=220",
+        name: "Amazon",
+        date: "17 Monday June",
+        price:"-$80",
+    },
+]
+
 
 const Main =()=>{
-    const data = [
-        {
-            image: profilepic,
-            name: "Alban Zyle"
-        },
-        {
-            image: profilepic,
-            name: "Ateo Zyle"
-        },
-        {
-            image: profilepic,
-            name: "Altin Zyle"
-        },
-        {
-            image: profilepic,
-            name: "Altin Zyle"
-        },
-        {
-            image: profilepic,
-            name: "Altin Zyle"
-        },
-        
-    ]
-
-    const expenseData = [
-        {
-            image: "https://static.vecteezy.com/system/resources/previews/020/927/346/original/vodafone-logo-brand-phone-symbol-with-name-white-design-england-mobile-illustration-with-red-background-free-vector.jpg",
-            name: "Vodafone",
-            date: "22 Monday April",
-            price:"-$32",
-        },
-        {
-            image: "https://tse1.mm.bing.net/th?id=OIP.0B9qUkgn0IAUO6e2pP0pYQHaHa&pid=Api&P=0&h=220",
-            name: "Amazon",
-            date: "17 Monday June",
-            price:"-$80",
-        },
-    ]
+    const [show, setShow] = useState(false);
+    const [users, setUsers] = useState(data);
+    const [formData, setFormData] = useState({name:'', imageUrl: ''});
+    const [error, setError] = useState(false);
+    
+    const handleAddnew =()=>{
+        setShow(!show);
+        setError(false);
+    }
 
     return (
         <div className={styles.main}>
@@ -65,11 +59,12 @@ const Main =()=>{
             </div>
             <h2> Send money to</h2>
             <div className={styles.users}>
-                <div className={styles.contacts}>
-                    <CiCirclePlus className={styles.add}/>
+                <div onClick={handleAddnew} className={styles.contacts}>
+                    <CiCirclePlus  className={styles.add}/>
                     <p> Add New Contact</p>
                 </div>
-                {data.map((user, index) =>(
+                {show && <Addnew show={show} setShow={setShow} error={error} setError={setError} users={users} setUsers={setUsers}/>}
+                {users.map((user, index) =>(
                     <Contact key={index} name={user.name} image={user.image}/>
                 ))}
             </div>
