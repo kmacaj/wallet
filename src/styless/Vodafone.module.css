@@ -1,0 +1,32 @@
+.expenses > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.expenses{
+    background-color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    
+}
+.expenses >h2{
+    color: red;
+}
+.april{
+    margin-right: 70px;
+}
+.april >h3{
+    margin: 0;
+    font-size: 15px;
+    color: gray;
+}
+
+.april >h1{
+    margin: 0;
+    font-size: 25px;
+}

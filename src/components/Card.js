@@ -2,7 +2,7 @@ import React from "react";
 import styles from '../styless/Card.module.css'
 const Card =({title, price, percent, bColor1, bColor2, barColor, pColor})=>{
     return(
-    <div  style={{background: `linear-gradient(to bottom, ${bColor1}, ${bColor2})`}} className={styles.main}>
+    <div  style={{background: `linear-gradient(240deg, ${bColor1}, ${bColor2})`}} className={styles.main}>
         <h1>{title}</h1>
 
         <div className={styles.price}>
@@ -10,7 +10,7 @@ const Card =({title, price, percent, bColor1, bColor2, barColor, pColor})=>{
         </div>
 
         <div className={styles.bar}>
-            <div className={styles.progress} style={{width: `${percent}%`, background: barColor}}>m</div>
+            <div className={styles.progress} style={{width: `${percent}%`, background: barColor}}/>
         </div>
 
     </div>
